@@ -1,5 +1,8 @@
 // Toutes les requêtes vers l'API passent par ce fichier
-export const API_URL = (import.meta.env.VITE_API_URL || 'http://localhost:5000').replace(/\/$/, '');
+export const API_URL = (
+  import.meta.env.VITE_API_URL ||
+  'https://taskflow-2025.onrender.com'
+).replace(/\/$/, '');
 
 let onUnauthorized = () => {};
 export const setUnauthorizedHandler = (fn) => { onUnauthorized = fn; };
